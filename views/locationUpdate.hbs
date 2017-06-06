@@ -1,0 +1,55 @@
+<!doctype html>
+
+<link rel="stylesheet" type="text/css" href="stylesheets/locations.css" />
+<html>
+<div class="head-bar">
+  <a href="http://localhost:3000/"><header class="head-bar-title">Database Viewer 5000</header></a>
+  <a href="http://localhost:3000/QuickAdd"><div class="quick-add-btn">
+    <p class="add-btn-p">Quick Add</p>
+    <img class="add-btn-img" src="/img/down-arrow.png"></img>
+  </div></a>
+</div>
+<div class="content-container">
+  <div class="side-barTwo">
+    <a href="http://localhost:3000/customers"><div class="customer-opt-block">
+      <h1 class="customer-opt">Customer</h1>
+    </div></a>
+      <a href="http://localhost:3000/inventory"><div class="CarsAvailable-opt-block">
+        <h1 class="CarsAvailable-opt">Cars Available</h1>
+      </div></a>
+        <a href="http://localhost:3000/locations"><div class="DealerLocations-opt-block">
+          <h1 class="DealerLocations-opt">Dealer Locations</h1>
+        </div></a>
+      <a href="http://localhost:3000/salesmen"><div class="Salesmen-opt-block">
+        <h1 class="Salesmen-opt">Salesmen on Duty</h1>
+      </div></a>
+    <a href="http://localhost:3000/events"><div class="Events-opt-block">
+      <h1 class="Events-opt">Upcoming Events</h1>
+    </div></a>
+  </div>
+
+<div class="main-content">
+  <h1 class="add-header">Update Your Customer</h1>
+  <a href="http://localhost:3000/customers"><div class="back-to-original">
+    <p class="back-p">Back</p>
+  </div></a>
+
+  <form class="add-form" method="post" action="/locationcommit">
+    <div class="btn-opts">
+      <a href="http://localhost:3000/customers"><div class="cancel-btn">
+        <p class="cancel">Cancel</p>
+      </div></a>
+    </div>
+    <label class="hidden-id-form-container" for="identification"></label>
+      <input class="hidden-id-form-container" id="identification" type="text" name="identification" value={{items._id}} />
+    <label for="State">State</label>
+      <input id="State" type="text" value="{{items.State}}" name="State"/>
+    <label for="City">City</label>
+      <input id="City" type="text" value="{{items.City}}" name="City"/>
+    <label for="Zip">Zip code</label>
+      <input id="Zip" type="text" value="{{items.Zip}}" name="Zip"/>
+    <label for="Full">Full Address</label>
+      <input id="Full" type="text" value="{{items.Full}}" name="Full"/>
+    <button class="save-two" type="submit">Save</button>
+  </form>
+</div>

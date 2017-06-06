@@ -1,0 +1,231 @@
+body {
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.head-bar {
+  background-color: #7EC1FF;
+  height: 50px;
+  border-bottom: 1px solid lightblue;
+}
+
+.quick-add-btn {
+  background-color: #4EFF3D;
+  width: 120px;
+  display: flex;
+  margin-left: auto;
+  margin-right: 20px;
+  height: 50px;
+  margin-top: -41px;
+  border-bottom: 2px solid black;
+}
+
+.add-btn-p {
+  font-size: 17px;
+  font-family: cursive;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.add-btn-img {
+  height: 15px;
+  margin-top: 18px;
+  padding-right: 10px;
+}
+
+.content-container {
+  display: flex;
+}
+
+.index-header {
+  color: red;
+  font-size: 20px;
+}
+
+.head-bar-title {
+  font-size: 20px;
+  font-family: cursive;
+  padding-top: 10px;
+  padding-left: 30px;
+}
+
+.index-h1 {
+  color: blue;
+  font-size: 13px;
+}
+
+.side-bar {
+  background-color: #E6EAEE;
+  width: 225px;
+  display: inline-block;
+  height: 680px;
+  border-right: 1px solid black;
+}
+
+.customer-opt-block {
+  height: 45px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.customer-opt {
+  margin: auto;
+  padding-top: 11px;
+  text-align: center;
+  font-size: 20px;
+  font-family: fantasy;
+}
+
+.CarsAvailable-opt-block {
+  height: 45px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.CarsAvailable-opt {
+  margin: auto;
+  padding-top: 11px;
+  text-align: center;
+  font-size: 20px;
+  font-family: fantasy;
+}
+
+.DealerLocations-opt-block {
+  height: 45px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.DealerLocations-opt {
+  margin: auto;
+  padding-top: 11px;
+  text-align: center;
+  font-size: 20px;
+  font-family: fantasy;
+}
+
+.Salesmen-opt-block {
+  height: 45px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.Salesmen-opt {
+  margin: auto;
+  padding-top: 11px;
+  text-align: center;
+  font-size: 20px;
+  font-family: fantasy;
+}
+
+.Events-opt-block {
+  height: 45px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.Events-opt {
+  margin: auto;
+  padding-top: 11px;
+  text-align: center;
+  font-size: 20px;
+  font-family: fantasy;
+}
+
+.content-combo {
+  display: flex;
+  padding-left: 30px;
+}
+
+.main-content-title {
+  padding-left: 10px;
+  color: #00C9FF;
+  font-family: fantasy;
+}
+
+.main-content-img {
+  height: 50px;
+  padding-top: 9px;
+}
+
+.main-content-p {
+  width: 500px;
+  text-align: left;
+  padding-left: 40px;
+  line-height: 20px;
+  font-family: monospace;
+}
+
+.add-query-row {
+  display: flex;
+  width: 1100px;
+}
+
+.btn-container {
+  display: flex;
+  background-color: #4EFF3D;
+  height: 40px;
+  width: 70px;
+  margin-left: 40px;
+  border-radius: 5px;
+}
+
+.search-form {
+  height: 20px;
+  width: 150px;
+  display: block;
+  margin-left: auto;
+}
+
+.input-search {
+  height: 20px;
+  width: 150px;
+  display: block;
+  margin-left: auto;
+}
+
+.add-customer-btn {
+  padding-left: 5px;
+  display: block;
+  margin-top: 12px;
+}
+
+.btn-add-img {
+  height: 20px;
+  padding-top: 11px;
+  padding-left: 6px;
+}
+
+.column-organization-container {
+  display: flex;
+  margin-left: 200px;
+  margin-top: 40px;
+}
+
+.column-one {
+  margin-right: 100px;
+  padding-right: 100px;
+  border-right: 1px solid;
+}
+
+.column-two {
+  margin-right: 100px;
+  padding-right: 100px;
+  border-right: 1px solid;
+}
+
+.column-three {
+  margin-right: 100px;
+  padding-right: 100px;
+  border-right: 1px solid;
+}
+
+.column-four {
+  margin-right: 100px;
+  padding-right: 100px;
+}

@@ -1,0 +1,102 @@
+<!doctype html>
+
+<link rel="stylesheet" type="text/css" href="stylesheets/inventory.css" />
+<html>
+<div class="head-bar">
+  <a href="http://localhost:3000/"><header class="head-bar-title">Database Viewer 5000</header></a>  <a href="http://localhost:3000/QuickAdd"><div class="quick-add-btn">
+    <p class="add-btn-p">Quick Add</p>
+    <img class="add-btn-img" src="/img/down-arrow.png"></img>
+  </div></a>
+</div>
+<div class="content-container">
+  <div class="side-bar">
+    <a href="http://localhost:3000/customers"><div class="customer-opt-block">
+      <h1 class="customer-opt">Customer</h1>
+    </div></a>
+      <a href="http://localhost:3000/inventory"><div class="CarsAvailable-opt-block">
+        <h1 class="CarsAvailable-opt">Cars Available</h1>
+      </div></a>
+        <a href="http://localhost:3000/locations"><div class="DealerLocations-opt-block">
+          <h1 class="DealerLocations-opt">Dealer Locations</h1>
+        </div></a>
+      <a href="http://localhost:3000/salesmen"><div class="Salesmen-opt-block">
+        <h1 class="Salesmen-opt">Salesmen on Duty</h1>
+      </div></a>
+    <a href="http://localhost:3000/events"><div class="Events-opt-block">
+      <h1 class="Events-opt">Upcoming Events</h1>
+    </div></a>
+  </div>
+
+  <div class="main-content">
+    <div class="content-combo">
+      <img class="main-content-img" src="/img/blue-home.png"></img>
+      <h1 class="main-content-title">Inventory</h1>
+    </div>
+    <div class="add-query-row">
+      <a href="http://localhost:3000/inventoryAddition"><div class="btn-container">
+        <img class="btn-add-img" src="/img/white-plus.png"></img>
+        <p class="add-customer-btn">Add</p>
+      </div></a>
+      <form class="search-form" method="post" action="/inventoryquery">
+        <button type="submit" class="search-button"><img class="searchimg" src="/img/glass.svg"></img></button>
+        <input class="input-search" id="query" type="text" placeholder="search..." name="query"></input>
+      </form>
+    </div>
+      <div class="column-organization-container">
+        <div class="column-one">
+          <p class="column-one-p">Make</p>
+          {{# each items}}
+            <span class="mongo-data">{{ this.Make }}</span>
+          {{/each}}
+        </div>
+        <div class="column-two">
+          <p class="column-two-p">Model</p>
+          {{# each items}}
+            <span class="mongo-data">{{ this.Model }}</span>
+          {{/each}}
+        </div>
+        <div class="column-three">
+          <p class="column-three-p">Year</p>
+          {{# each items}}
+            <span class="mongo-data">{{ this.Year }}</span>
+          {{/each}}
+        </div>
+        <div class="column-four">
+          <p class="column-four-p">Price</p>
+          {{# each items}}
+            <span class="mongo-data">{{ this.Price }}</span>
+          {{/each}}
+        </div>
+        <div class="delete-btns">
+          <p class="delete-btns-p"></p>
+          {{# each items}}
+          <form class="hidden-form" method="post" action="/inventorydelete">
+            <input class="hidden-id-form-container" id="spoof" type="text" name="spoof" value={{this._id}}></input>
+              <button class="delete-btn" id="{{this._id}}" type="submit">X</button>
+          </form>
+          <script>
+          document
+          .getElementById("{{this._id}}")
+          .addEventListener("click", function( e ){ //e => event
+                if( ! confirm("Do you really want to delete this customer?") ){
+                    e.preventDefault(); // ! => don't want to do this
+                };
+            });
+          </script>
+          {{/each}}
+        </div>
+        <div class="update-btns">
+          <p class="update-btns-p"></p>
+          {{# each items}}
+          <div class="hidden-form">
+            <form class="something" method="get" action='/inventoryupdatePage'>
+              <input class="hidden-id-form-container" type="text" name="identification" value={{this._id}}></input>
+              <button class="update-btn" id="identification" type="submit"><img class="pencilimg" src="/img/pencil.png"></img></button>
+            </form>
+          </div>
+          {{/each}}
+      </div>
+      </div>
+  </div>
+</div>
+</html>

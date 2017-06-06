@@ -1,0 +1,53 @@
+<!doctype html>
+
+<link rel="stylesheet" type="text/css" href="stylesheets/customers.css" />
+<html>
+<div class="head-bar">
+  <a href="http://localhost:3000/"><header class="head-bar-title">Database Viewer 5000</header></a>  <a href="http://localhost:3000/QuickAdd"><div class="quick-add-btn">
+    <p class="add-btn-p">Quick Add</p>
+    <img class="add-btn-img" src="/img/down-arrow.png"></img>
+  </div></a>
+</div>
+<div class="content-container">
+  <div class="side-bar">
+    <a href="http://localhost:3000/customers"><div class="customer-opt-block">
+      <h1 class="customer-opt">Customer</h1>
+    </div></a>
+      <a href="http://localhost:3000/inventory"><div class="CarsAvailable-opt-block">
+        <h1 class="CarsAvailable-opt">Cars Available</h1>
+      </div></a>
+        <a href="http://localhost:3000/locations"><div class="DealerLocations-opt-block">
+          <h1 class="DealerLocations-opt">Dealer Locations</h1>
+        </div></a>
+      <a href="http://localhost:3000/salesmen"><div class="Salesmen-opt-block">
+        <h1 class="Salesmen-opt">Salesmen on Duty</h1>
+      </div></a>
+    <a href="http://localhost:3000/events"><div class="Events-opt-block">
+      <h1 class="Events-opt">Upcoming Events</h1>
+    </div></a>
+  </div>
+
+  <div class="main-content">
+    <div class="content-combo">
+      <img class="main-content-img" src="/img/blue-home.png"></img>
+      <h1 class="main-content-title">Customers</h1>
+    </div>
+
+<div class="column-one">
+  <p class="column-one-p">Name</p>
+  {{# each name}}
+  <span class="mongo-data">{{ this.Firstname }} {{ this.Lastname }}</span>
+  {{/each}}
+</div>
+<div class="column-three">
+  <p class="column-three-p">phone</p>
+  {{# each name}}
+  <span class="mongo-data">{{ this.phone }}</span>
+  {{/each}}
+</div>
+<div class="column-four">
+  <p class="column-four-p">email</p>
+  {{# each name}}
+  <span class="mongo-data">{{ this.email }}</span>
+  {{/each}}
+</div>

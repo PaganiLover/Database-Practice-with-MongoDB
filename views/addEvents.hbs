@@ -1,0 +1,53 @@
+<!doctype html>
+
+<link rel="stylesheet" type="text/css" href="stylesheets/events.css" />
+<html>
+<div class="head-bar">
+  <a href="http://localhost:3000/"><header class="head-bar-title">Database Viewer 5000</header></a>  <a href="http://localhost:3000/QuickAdd"><div class="quick-add-btn">
+    <p class="add-btn-p">Quick Add</p>
+    <img class="add-btn-img" src="/img/down-arrow.png"></img>
+  </div></a>
+</div>
+<div class="content-container">
+  <div class="side-bar">
+    <a href="http://localhost:3000/customers"><div class="customer-opt-block">
+      <h1 class="customer-opt">Customer</h1>
+    </div></a>
+      <a href="http://localhost:3000/inventory"><div class="CarsAvailable-opt-block">
+        <h1 class="CarsAvailable-opt">Cars Available</h1>
+      </div></a>
+        <a href="http://localhost:3000/locations"><div class="DealerLocations-opt-block">
+          <h1 class="DealerLocations-opt">Dealer Locations</h1>
+        </div></a>
+      <a href="http://localhost:3000/salesmen"><div class="Salesmen-opt-block">
+        <h1 class="Salesmen-opt">Salesmen on Duty</h1>
+      </div></a>
+    <a href="http://localhost:3000/events"><div class="Events-opt-block">
+      <h1 class="Events-opt">Upcoming Events</h1>
+    </div></a>
+  </div>
+
+<div class="main-content">
+  <h1 class="add-header">Add A New Event</h1>
+  <a href="http://localhost:3000/events"><div class="back-to-original">
+    <p class="back-p">Back</p>
+  </div></a>
+
+  <form class="add-form" method="POST" action="/eventAddition">
+    <div class="btn-opts">
+      <button class="save" type="submit">Save</button>
+      <a href="http://localhost:3000/customers"><div class="cancel-btn">
+        <p class="cancel">Cancel</p>
+      </div></a>
+    </div>
+    <label for="Ename">Event Name</label>
+    <input id="Ename" type="text" placeholder="required" name="Ename"/>
+    <label for="Edate">Event Date</label>
+    <input id="Edate" type="date" placeholder="required" name="Edate"/>
+    <label for="Etime">Event Time</label>
+    <input id="Etime" type="text" placeholder="required" name="Etime"/>
+    <label for="Eprice">Event Price</label>
+    <input id="Eprice" type="text" placeholder="required" name="Eprice"/>
+    <button class="save-two" type="submit">Save</button>
+  </form>
+</div>
